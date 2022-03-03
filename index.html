@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Wordle</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div id="loader">
+      <div class="loaderAnim"></div>
+      <p>Selecting a Random Word...</p>
+    </div>
     <div class="game">
-        <div class="guess-grid">
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
-            <div class="c1r1"></div>
+      <div class="guess-grid">
+        <div class="row">
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
         </div>
-        <div class="keyboard">
-            <button class="r1 letter">Q</button>
-            <button class="r1 letter">W</button>
-            <button class="r1 letter">E</button>
-            <button class="r1 letter">R</button>
-            <button class="r1 letter">T</button>
-            <button class="r1 letter">Y</button>
-            <button class="r1 letter">U</button>
-            <button class="r1 letter">I</button>
-            <button class="r1 letter">O</button>
-            <button class="r1 letter">P</button>
-            <button class="r2 letter">A</button>
-            <button class="r2 letter">S</button>
-            <button class="r2 letter">D</button>
-            <button class="r2 letter">F</button>
-            <button class="r2 letter">G</button>
-            <button class="r2 letter">H</button>
-            <button class="r2 letter">J</button>
-            <button class="r2 letter">K</button>
-            <button class="r2 letter">L</button>
-            <button class="r3 keyboard-button">ENTER</button>
-            <button class="r3 letter">Z</button>
-            <button class="r3 letter">X</button>
-            <button class="r3 letter">C</button>
-            <button class="r3 letter">V</button>
-            <button class="r3 letter">B</button>
-            <button class="r3 letter">N</button>
-            <button class="r3 letter">M</button>
-            <button class="r3 keyboard-button">DELETE</button>
+        <div class="row">
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
         </div>
-    </div>    
-</body>
+        <div class="row">
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+        </div>
+        <div class="row">
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+        </div>
+        <div class="row">
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+        </div>
+        <div class="row">
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+          <div class="guess-tile"></div>
+        </div>
+      </div>
+      
+
+      <div class="keyboard">
+        <button id="q" class="r1 letter">Q</button>
+        <button id="w" class="r1 letter">W</button>
+        <button id="e" class="r1 letter">E</button>
+        <button id="r" class="r1 letter">R</button>
+        <button id="t" class="r1 letter">T</button>
+        <button id="y"  class="r1 letter">Y</button>
+        <button id="u" class="r1 letter">U</button>
+        <button id="i" class="r1 letter">I</button>
+        <button id="o" class="r1 letter">O</button>
+        <button id="p" class="r1 letter">P</button>
+        <button id="a" class="r2 letter">A</button>
+        <button id="s" class="r2 letter">S</button>
+        <button id="d" class="r2 letter">D</button>
+        <button id="f" class="r2 letter">F</button>
+        <button id="g" class="r2 letter">G</button>
+        <button id="h" class="r2 letter">H</button>
+        <button id="j" class="r2 letter">J</button>
+        <button id="k" class="r2 letter">K</button>
+        <button id="l" class="r2 letter">L</button>
+        <button id="enter" class="r3 keyboard-button">ENTER</button>
+        <button id="z" class="r3 letter">Z</button>
+        <button id="x" class="r3 letter">X</button>
+        <button id="c" class="r3 letter">C</button>
+        <button id="v" class="r3 letter">V</button>
+        <button id="b" class="r3 letter">B</button>
+        <button id="n" class="r3 letter">N</button>
+        <button id="m" class="r3 letter">M</button>
+        <button id="delete" class="r3 keyboard-button">DELETE</button>
+      </div>
+    </div>
+
+  </body>
+  <script type='text/javascript' src='config.js'></script>
+  <script type="text/javascript" src="script.js"></script>
 </html>
